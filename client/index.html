@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>LambertChat</title>
+  <meta name="author" content="Matteo Lambertucci  matteolambertucci3@gmail.com" />
+  <meta name="application-name" content="LambertChat">
+  <meta name="description:" content="Public Chat-Room" />
+  <meta name="keywords" content="NodeJS , Javascript , Server , Back-end , Chat-Service , LambertChat" />
+  <meta name="generator" content="VS-Code" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <meta name="theme-color" content="#A3F4EE" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!--<base href='<YOUR BASE URL , DEFAULT: http://127.0.0.1:80/>' target='_self'/> -->
+  <link rel="icon" href="icon/favicon.ico" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+    integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+  <link rel="stylesheet" type="text/css" href="css/index.css" />
+  <!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"> -->
+</head>
+
+<body>
+  <div class="chat-container">
+    <header class="chat-header">
+      <h2 class="title" title="Prova a cliccarmi..." onclick="infoClick()">
+        <i class="fa fa-smile"></i>&nbsp&nbspLambertChat
+      </h2>
+      <a href="https://www.google.it/" class="btn">Abbandona</a>
+    </header>
+    <main class="chat-main" title="Muoviti su e giù tra i messaggi attraverso le freccette direzionali.">
+      <div class="chat-sidebar" style="overflow-y: scroll">
+        <br />
+        <h3><i class="fa fa-comment"></i>&nbsp&nbsp&nbspUsername</h3>
+        <h2 title='Questo è il tuo Username' id="user-name-container" style="font-size: 145%;"></h2>
+        <h3 title='Utenti Online...' id="online"></h3>
+        <ul title='Utenti Online...' id="users"></ul>
+      </div>
+      <div class="chat-messages">
+        <div id="typing"></div>
+      </div>
+    </main>
+    <div class="chat-form-container">
+      <input type="file" id="file" accept="image/*" onchange="getImgSrc()" />
+      <label id="lfile" for="file" title="MAX 1.5 MB"><i class="fas fa-file-image"></i></label>&nbsp&nbsp
+      <label id="microphone" onclick="start_stop()"
+        title="Clicca sul Microfono per iniziare l'audio e poi riclicca stopparlo">
+        <i class=" fa fa-microphone"></i>
+      </label>
+      <form id="chat-form">
+        <input type="text" maxlength="100" id="msg" placeholder="Scrivi un Messaggio..." autocomplete="off"
+          onkeyup="startType()" onfocusout="notType()" />
+        <button class="btn" type="submit">
+          <i class="fas fa-paper-plane"></i> Invia
+        </button>
+      </form>
+    </div>
+  </div>
+  <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+    crossorigin="anonymous"></script>-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
+  <script type="text/javascript" src="js/notification/request.js"></script>
+  <script type="text/javascript" src="js/utils.js"></script>
+  <script type="text/javascript" src="js/index.js"></script>
+</body>
+
+</html>

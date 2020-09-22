@@ -1,0 +1,40 @@
+{
+  "name": "NodeJS-Chat",
+  "version": "1.0.0",
+  "description": "Node.js Chat-Room",
+  "author": "Matteo Lambertucci matteolambertucci3@gmail.com",
+  "main": "server.js",
+  "private": false,
+  "license": "ISC",
+  "keywords": [
+    "Real-Time",
+    "Chat-service",
+    "Node JS",
+    "Javascript",
+    "Express",
+    "Socket.io",
+    "Responsive-Layout"
+  ],
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MattDEV02/NodeJS-Chat.git"
+  },
+  "homepage": "https://github.com/MattDEV02/NodeJS-Chat",
+  "bugs": {
+    "url": "https://github.com/MattDEV02/NodeJS-Chat/issues"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "node": "^14.8.0",
+    "npm": "^6.14.0",
+    "request": "^2.88.2",
+    "socket.io": "^2.3.0"
+  }
+}
